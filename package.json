@@ -7,16 +7,22 @@
   "license": "MIT",
   "scripts": {
     "start": "gatsby develop",
+    "start:server": "nodemon server/start.js",
     "format": "prettier --write '{gatsby-*.js,src/**/*.{js,jsx,json,css}}'",
     "build": "rm -rf public && rm -rf .cache && gatsby build",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public ."
   },
   "dependencies": {
+    "apollo-server": "^2.4.8",
+    "apollo-server-express": "^2.4.8",
     "babel-plugin-styled-components": "^1.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "gatsby": "^2.3.12",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-typography": "^2.2.10",
+    "graphql": "^14.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
@@ -26,12 +32,16 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "husky": "^1.3.1",
+    "jest": "^24.7.1",
     "lint-staged": "^8.1.5",
+    "nodemon": "^1.18.11",
     "prettier": "^1.16.4"
   },
   "husky": {
