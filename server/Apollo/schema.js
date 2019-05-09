@@ -2,7 +2,8 @@ import { gql } from 'apollo-server-express';
 
 export default gql`
   type Query {
-    posts: [Post]
+    posts: [Post!]
+    post(id: ID!): Post
   }
 
   type Post {
